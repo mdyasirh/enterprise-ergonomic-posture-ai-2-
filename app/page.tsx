@@ -86,15 +86,17 @@ export default function Home() {
       )}
       {currentScreen === 1 && <Screen1Guide onNext={handleNextToCapture} onBack={handleBackToHome} />}
       {currentScreen === 2 && (
-        <Screen2Capture 
-          onBack={handleBackToGuide} 
-          onCapture={(src) => handleCapture([src])} 
+        <Screen2Capture
+          onBack={handleBackToGuide}
+          onCapture={(src) => handleCapture([src])}
+          onBatchUpload={handleCapture}
         />
       )}
       {currentScreen === 3 && capturedImages.length > 0 && (
-        <Screen3Results 
-          imageSrcs={capturedImages} 
-          onAnalyzeAnother={handleBackToHome} 
+        <Screen3Results
+          imageSrcs={capturedImages}
+          onBack={() => setCurrentScreen(2)}
+          onAnalyzeAnother={handleBackToHome}
         />
       )}
     </div>
