@@ -1,0 +1,5 @@
+{
+  "name": "Enterprise Ergonomic Posture AI",
+  "description": "Enterprise Healthcare/Ergonomics software using Next.js, React, Tailwind CSS, and TensorFlow.js/MediaPipe Pose Detection.",
+  "requestFramePermissions": ["camera"]
+}
